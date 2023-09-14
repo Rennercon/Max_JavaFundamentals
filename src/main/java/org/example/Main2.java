@@ -1,12 +1,46 @@
 package org.example;
 
+import  java.util.Scanner;
 public class Main2 {
     public static void main(String[] args) {
-        System.out.println("Hello and welcome!1");
+        Scanner scanner = new Scanner(System.in);
 
-        for (int i = 1; i <= 5; i++) {
+        System.out.print("Введите первое число:");
+        int num1 = scanner.nextInt();
 
-            System.out.println("i = " + i);
+        System.out.print("Введите второе число:");
+        int num2 = scanner.nextInt();
+
+        System.out.print("Действие");
+        String action = scanner.nextLine();
+        action = scanner.nextLine();
+
+        float sum;
+
+        switch (action) {
+            case "+" -> {
+                sum = num1 + num2;
+                System.out.println(sum);
+            }
+            case "-" -> {
+                sum = num1 - num2;
+                System.out.println(sum);
+            }
+            case "*" -> {
+                sum = num1 * num2;
+                System.out.println(sum);
+            }
+            case "/" -> {
+                if (num2 == 0)
+                    System.out.println("Eror");
+                else {
+                    sum = (float) num1 / num2;
+                    System.out.println(sum);
+                }
+            }
+            default -> System.out.println("Что-то пошло не так!");
         }
+
+
     }
 }
