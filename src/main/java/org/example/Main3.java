@@ -13,11 +13,7 @@ public class Main3 {
 
     public static void main(String[] args) {
         // Output on display
-        Integer[] lol = new Integer[4];
-        lol[0] = 1;
-        lol[1] = 2;
-        lol[2] = 3;
-        lol[3] = 4;
+        Integer[] lol = { 1, 2, 3, 4};
         printArray(lol);
         System.out.println("Фунты: " + Main3.toFunt(kg));
         System.out.println("Кг: " + Main3.toKg(funt));
