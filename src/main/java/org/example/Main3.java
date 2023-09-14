@@ -1,19 +1,23 @@
 package org.example;
 
 public class Main3 {
-    // Atributes
+    // Атрибуты
     static float kg = 1;
     static float funt = 1;
     static float km = 1;
     static float mi = 1;
 
 
-    //Konstructor
+    //Конструктор
 
 
     public static void main(String[] args) {
-        // Output on display
-        Integer[] lol = { 1, 2, 3, 4};
+        // Вывод на экран
+        Integer[] lol = new Integer[4];
+        lol[0] = 1;
+        lol[1] = 2;
+        lol[2] = 3;
+        lol[3] = 4;
         printArray(lol);
         System.out.println("Фунты: " + Main3.toFunt(kg));
         System.out.println("Кг: " + Main3.toKg(funt));
@@ -22,28 +26,28 @@ public class Main3 {
 
     }
 
-    // Metods:
-    // Convert kg to pounds
+    // Методы:
+    // Перевод кг в фунты
     public static double toFunt(float kg) {
         return (kg * 2.205f);
     }
 
-    // Pounds to kg
+    // Фунты в кг
     public static double toKg(float funt) {
         return funt / 2.205f;
     }
 
-    // miles to km
+    // мили  в км
     public static double toKm(float mi) {
         return mi / 1.609f;
     }
 
-    //km to miles
+    //км в мили
     public static double toMi(float km) {
         return km * 1.609f;
     }
 
-    // output all values in the array
+    // вывод всех значений в массиве
     public static void printArray(Integer[] arr) {
         for (int i : arr) {
             System.out.println(i + " ");
